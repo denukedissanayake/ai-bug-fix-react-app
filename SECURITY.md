@@ -17,12 +17,12 @@ This document outlines the dependency security vulnerabilities that have been ad
 
 ### 2. postcss - Improper Input Validation
 - **Original Version**: 7.0.39
-- **Fixed Version**: 8.5.6
+- **Fixed Version**: 8.4.31+ (installed: 8.5.6)
 - **Severity**: MEDIUM
 - **CVE ID**: SNYK-JS-POSTCSS-5926692
 - **CVSS Score**: 5.3 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N)
 - **Description**: Improper input validation when parsing external CSS with linters
-- **Fix Applied**: Package version overridden to 8.5.6 via npm overrides
+- **Fix Applied**: Package version overridden to ^8.4.31 via npm overrides
 
 ### 3. serialize-javascript - Cross-site Scripting (XSS)
 - **Original Version**: 4.0.0
@@ -35,21 +35,21 @@ This document outlines the dependency security vulnerabilities that have been ad
 
 ### 4. webpack-dev-server - Origin Validation Error
 - **Original Version**: 4.15.2
-- **Fixed Version**: 5.2.2
+- **Fixed Version**: 5.2.1+ (installed: 5.2.2)
 - **Severity**: HIGH
 - **CVE ID**: SNYK-JS-WEBPACKDEVSERVER-10300775
 - **CVSS Score**: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N)
 - **Description**: Origin validation error allowing IP address origins to connect to WebSocket
-- **Fix Applied**: Package version overridden to 5.2.2 via npm overrides
+- **Fix Applied**: Package version overridden to ^5.2.1 via npm overrides
 
 ### 5. webpack-dev-server - Exposed Dangerous Method or Function
 - **Original Version**: 4.15.2
-- **Fixed Version**: 5.2.2
+- **Fixed Version**: 5.2.1+ (installed: 5.2.2)
 - **Severity**: MEDIUM
 - **CVE ID**: SNYK-JS-WEBPACKDEVSERVER-10300777
 - **CVSS Score**: 5.9 (CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N)
 - **Description**: Exposed dangerous methods via `__webpack_modules__` object
-- **Fix Applied**: Package version overridden to 5.2.2 via npm overrides
+- **Fix Applied**: Package version overridden to ^5.2.1 via npm overrides
 
 ## Known Issues
 
