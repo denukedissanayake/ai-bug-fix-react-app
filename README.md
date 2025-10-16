@@ -62,6 +62,16 @@ This React application is designed to demonstrate common security vulnerabilitie
 - Improper CORS configuration
 - Missing content security policies
 
+## Security Updates
+
+⚠️ **Important**: Dependency security vulnerabilities have been addressed. See [SECURITY.md](./SECURITY.md) for details on the fixes applied.
+
+As of 2025-10-16:
+- ✅ 5 out of 6 vulnerabilities fixed using npm overrides
+- ⚠️ 1 vulnerability (inflight) has no fix available (unmaintained package)
+
+Run `npm audit` to verify the current security status.
+
 ## Installation
 
 ```bash
