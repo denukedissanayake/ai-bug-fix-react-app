@@ -8,12 +8,12 @@ This document outlines the dependency security vulnerabilities that have been ad
 
 ### 1. nth-check - Regular Expression Denial of Service (ReDoS)
 - **Original Version**: 1.0.2
-- **Fixed Version**: 2.1.1
+- **Fixed Version**: 2.1.1+ (installed: 2.1.1)
 - **Severity**: HIGH
 - **CVE ID**: SNYK-JS-NTHCHECK-1586032
 - **CVSS Score**: 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)
 - **Description**: Vulnerable to ReDoS when parsing crafted invalid CSS nth-checks
-- **Fix Applied**: Package version overridden to 2.1.1 via npm overrides
+- **Fix Applied**: Package version overridden to ^2.1.1 via npm overrides
 
 ### 2. postcss - Improper Input Validation
 - **Original Version**: 7.0.39
@@ -26,12 +26,12 @@ This document outlines the dependency security vulnerabilities that have been ad
 
 ### 3. serialize-javascript - Cross-site Scripting (XSS)
 - **Original Version**: 4.0.0
-- **Fixed Version**: 6.0.2
+- **Fixed Version**: 6.0.2+ (installed: 6.0.2)
 - **Severity**: MEDIUM
 - **CVE ID**: SNYK-JS-SERIALIZEJAVASCRIPT-6147607
 - **CVSS Score**: 5.4 (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N)
 - **Description**: Vulnerable to XSS due to unsanitized URLs
-- **Fix Applied**: Package version overridden to 6.0.2 via npm overrides
+- **Fix Applied**: Package version overridden to ^6.0.2 via npm overrides
 
 ### 4. webpack-dev-server - Origin Validation Error
 - **Original Version**: 4.15.2
@@ -67,7 +67,9 @@ This document outlines the dependency security vulnerabilities that have been ad
 
 ### NPM Overrides
 
-The fixes have been implemented using npm's `overrides` feature in `package.json`. This forces all transitive dependencies to use the secure versions of the vulnerable packages:
+The fixes have been implemented using npm's `overrides` feature in `package.json`. This forces all transitive dependencies to use the secure versions of the vulnerable packages.
+
+The overrides specify minimum required versions (using caret `^` notation), and npm automatically installs the latest compatible version available:
 
 ```json
 "overrides": {
@@ -77,6 +79,8 @@ The fixes have been implemented using npm's `overrides` feature in `package.json
   "webpack-dev-server": "^5.2.1"
 }
 ```
+
+**Note**: The version numbers shown in the "Fixed Version" sections indicate the minimum version required to fix each vulnerability, followed by the actual version installed by npm (if different).
 
 ### Verification
 
