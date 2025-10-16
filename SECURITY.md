@@ -80,7 +80,14 @@ The overrides specify minimum required versions (using caret `^` notation), and 
 }
 ```
 
-**Note**: The version numbers shown in the "Fixed Version" sections indicate the minimum version required to fix each vulnerability, followed by the actual version installed by npm (if different).
+**Note**: The version numbers shown in the "Fixed Version" sections indicate the minimum version required to fix each vulnerability, followed by the actual version installed by npm (if different). The caret (`^`) notation allows npm to install any compatible version within the same major version, so it automatically selects the latest stable version that satisfies the constraint.
+
+**Important Considerations When Using npm Overrides:**
+- ⚠️ Overrides force specific versions across the entire dependency tree, which may introduce compatibility issues with packages expecting different versions
+- ✅ In this case, all overrides were carefully chosen to use minimum versions specified in security advisories
+- ✅ The application has been tested and builds successfully with these overrides
+- ⚠️ Future updates to direct dependencies (like react-scripts) should be tested to ensure they remain compatible with these overrides
+- 💡 Best practice: Remove overrides when direct dependencies are updated to versions that no longer require them
 
 ### Verification
 
