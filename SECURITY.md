@@ -8,7 +8,7 @@ This application is **intentionally vulnerable** and designed for educational an
 
 ### Last Security Scan
 
-- **Scan Date**: 2024-10-16 (from automated security scan workflow)
+- **Scan Date**: 2025-10-16 (from automated security scan workflow)
 - **Scanner**: Snyk + npm audit
 - **Initial Vulnerabilities**: 6 (9 total including duplicates)
 - **Fixed**: 4 vulnerabilities
@@ -180,5 +180,5 @@ ls -la build/
 
 ---
 
-**Last Updated**: 2024-10-16  
+**Last Updated**: 2025-10-16  
 **Maintained By**: Security Team
