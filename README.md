@@ -137,6 +137,60 @@ For each vulnerability, here are the secure alternatives:
 
 MIT License - For educational purposes only
 
+## Dependency Security Status
+
+### Fixed Vulnerabilities (via npm overrides)
+
+The following dependency vulnerabilities have been mitigated using npm's `overrides` feature in package.json:
+
+1. **nth-check** (High Severity)
+   - CVE: SNYK-JS-NTHCHECK-1586032
+   - Fixed by: Upgrading from 1.0.2 to 2.1.1
+   - Issue: Regular Expression Denial of Service (ReDoS)
+
+2. **postcss** (Moderate Severity)
+   - CVE: SNYK-JS-POSTCSS-5926692
+   - Fixed by: Upgrading from 7.0.39 to 8.4.31+
+   - Issue: Improper Input Validation
+
+3. **serialize-javascript** (Moderate Severity)
+   - CVE: SNYK-JS-SERIALIZEJAVASCRIPT-6147607
+   - Fixed by: Upgrading from 4.0.0 to 6.0.2
+   - Issue: Cross-site Scripting (XSS)
+
+4. **inflight** (Moderate Severity)
+   - CVE: SNYK-JS-INFLIGHT-6095116
+   - Status: No fix available (unmaintained library)
+   - Issue: Memory leak due to resource not being released
+   - Note: This library has been deprecated and is gradually being removed from the ecosystem
+
+### Remaining Vulnerabilities (Development Only)
+
+The following vulnerabilities remain but are **development-only** and have limited impact:
+
+1. **webpack-dev-server@4.15.2** (Moderate Severity - 2 CVEs)
+   - CVE: SNYK-JS-WEBPACKDEVSERVER-10300775, SNYK-JS-WEBPACKDEVSERVER-10300777
+   - Status: No fix available in v4.x line; fix requires v5.2.1+ which is incompatible with react-scripts@5.0.1
+   - Issue: Source code theft via malicious websites (requires specific attack scenarios)
+   - **Impact**: Development only - not present in production builds
+   - **Mitigation**: 
+     - Only run development server in trusted environments
+     - Don't browse untrusted websites while dev server is running
+     - Use Chromium-based browsers which are unaffected by one of the CVEs
+     - Production builds do not include webpack-dev-server
+
+### How to Verify
+
+Run `npm audit` to see the current security status:
+```bash
+npm audit
+```
+
+To see the overridden packages:
+```bash
+npm list nth-check postcss serialize-javascript
+```
+
 ## Disclaimer
 
 The creators of this application are not responsible for any misuse. This tool is meant for learning and testing in controlled environments only.
