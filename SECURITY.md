@@ -12,11 +12,11 @@ The following security vulnerabilities have been addressed using npm package ove
    - Issue: Regular Expression Denial of Service (ReDoS)
    - Fix: Override to version `^2.0.1`
 
-2. **postcss** - Upgraded from 7.0.39 to 8.5.6
+2. **postcss** - Upgraded from 7.0.39 to 8.4.31+
    - CVE: SNYK-JS-POSTCSS-5926692
    - Severity: MEDIUM
    - Issue: Improper Input Validation
-   - Fix: Override to version `^8.4.31`
+   - Fix: Override to version `^8.4.31` (resolves to 8.5.6)
 
 3. **serialize-javascript** - Upgraded from 4.0.0 to 6.0.2
    - CVE: SNYK-JS-SERIALIZEJAVASCRIPT-6147607
@@ -24,11 +24,11 @@ The following security vulnerabilities have been addressed using npm package ove
    - Issue: Cross-site Scripting (XSS)
    - Fix: Override to version `^6.0.2`
 
-4. **webpack-dev-server** - Upgraded from 4.15.2 to 5.2.2
+4. **webpack-dev-server** - Upgraded from 4.15.2 to 5.2.1+
    - CVE: SNYK-JS-WEBPACKDEVSERVER-10300775, SNYK-JS-WEBPACKDEVSERVER-10300777
    - Severity: HIGH, MEDIUM
    - Issue: Origin Validation Error and Exposed Dangerous Method
-   - Fix: Override to version `^5.2.1`
+   - Fix: Override to version `^5.2.1` (resolves to 5.2.2)
 
 ## Known Unresolved Vulnerabilities
 
