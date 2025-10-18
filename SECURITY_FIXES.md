@@ -22,7 +22,7 @@ This document describes the fixes applied to resolve 6 security vulnerabilities 
 ### 3. postcss@7.0.39 - Improper Input Validation (MEDIUM)
 - **Status**: ✅ Fixed
 - **CVE ID**: SNYK-JS-POSTCSS-5926692
-- **Solution**: Upgraded from 7.0.39 to 8.4.31+
+- **Solution**: Upgraded from 7.0.39 to 8.4.31+ (installed: 8.5.6)
 - **Dependency Path**: react-scripts → resolve-url-loader → postcss
 - **Fix Method**: npm overrides in package.json
 
@@ -36,14 +36,14 @@ This document describes the fixes applied to resolve 6 security vulnerabilities 
 ### 5. webpack-dev-server@4.15.2 - Origin Validation Error (HIGH)
 - **Status**: ✅ Fixed
 - **CVE ID**: SNYK-JS-WEBPACKDEVSERVER-10300775
-- **Solution**: Upgraded from 4.15.2 to 5.2.2
+- **Solution**: Upgraded from 4.15.2 to 5.2.1+ (installed: 5.2.2)
 - **Dependency Path**: react-scripts → webpack-dev-server
 - **Fix Method**: npm overrides + patch-package for API compatibility
 
 ### 6. webpack-dev-server@4.15.2 - Exposed Dangerous Method (MEDIUM)
 - **Status**: ✅ Fixed
 - **CVE ID**: SNYK-JS-WEBPACKDEVSERVER-10300777
-- **Solution**: Upgraded from 4.15.2 to 5.2.2
+- **Solution**: Upgraded from 4.15.2 to 5.2.1+ (installed: 5.2.2)
 - **Dependency Path**: react-scripts → webpack-dev-server
 - **Fix Method**: npm overrides + patch-package for API compatibility
 
