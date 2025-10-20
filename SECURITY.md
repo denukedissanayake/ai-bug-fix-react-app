@@ -24,7 +24,7 @@ This document outlines the security vulnerabilities found in the project depende
 - **Fixed Version:** 8.5.6
 - **CVE:** SNYK-JS-POSTCSS-5926692
 - **Severity:** MEDIUM
-- **Fix Applied:** npm override to force version 8.4.31+
+- **Fix Applied:** npm override to force version 8.4.31 or higher
 - **Impact:** Fixed improper input validation when parsing CSS
 
 ### 3. serialize-javascript - XSS Vulnerability (MEDIUM → FIXED)
@@ -49,7 +49,7 @@ This document outlines the security vulnerabilities found in the project depende
 - **Current Version:** 4.15.2
 - **CVE:** SNYK-JS-WEBPACKDEVSERVER-10300775, SNYK-JS-WEBPACKDEVSERVER-10300777
 - **Severity:** MODERATE (one is marked HIGH in original scan)
-- **Required Fix:** Upgrade to 5.2.1+
+- **Required Fix:** Upgrade to 5.2.1 or higher
 - **Why Not Fixed:** 
   - react-scripts 5.0.1 depends on webpack-dev-server ^4.6.0
   - webpack-dev-server 5.x has breaking API changes incompatible with react-scripts 5.0.1
