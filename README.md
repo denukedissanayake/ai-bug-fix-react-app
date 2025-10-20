@@ -2,6 +2,21 @@
 
 ⚠️ **WARNING**: This application contains intentional security vulnerabilities for educational and testing purposes only. **DO NOT** deploy this to production or expose it to the internet.
 
+## Dependency Security Fixes
+
+**Fixed Vulnerabilities (4/6):**
+- ✅ `nth-check@1.0.2` → `2.1.1` - ReDoS vulnerability fixed
+- ✅ `postcss@7.0.39` → `8.5.6` - Input validation issue fixed  
+- ✅ `serialize-javascript@4.0.0` → `6.0.2` - XSS vulnerability fixed
+- ⚠️ `inflight@1.0.6` - No fix available (unmaintained package, memory leak)
+
+**Known Issues (2 moderate severity):**
+- ⚠️ `webpack-dev-server@4.15.2` - Cannot upgrade to 5.2.1+ without breaking react-scripts compatibility
+  - Impact: Potential source code exposure when accessing malicious websites (development server only)
+  - Mitigation: Only use for local development, never expose to public networks
+
+These fixes use npm `overrides` to force compatible versions of vulnerable dependencies while maintaining application functionality.
+
 ## Purpose
 
 This React application is designed to demonstrate common security vulnerabilities found in web applications. It can be used for:
