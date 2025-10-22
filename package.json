@@ -8,6 +8,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "postinstall": "node scripts/patch-webpack-dev-server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,6 +34,7 @@
   "overrides": {
     "nth-check": "^2.1.1",
     "postcss": "^8.4.31",
-    "serialize-javascript": "^6.0.2"
+    "serialize-javascript": "^6.0.2",
+    "webpack-dev-server": "^5.2.1"
   }
 }
