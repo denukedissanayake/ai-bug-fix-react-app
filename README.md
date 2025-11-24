@@ -68,6 +68,24 @@ This React application is designed to demonstrate common security vulnerabilitie
 npm install
 ```
 
+**Note:** The `postinstall` script will automatically patch the webpack-dev-server configuration to be compatible with version 5.x. This is required to fix critical security vulnerabilities in the development server.
+
+## Security Fixes
+
+This repository has been updated to fix **6 critical security vulnerabilities** in its dependencies. See [SECURITY_FIXES.md](SECURITY_FIXES.md) for complete details.
+
+**Current Security Status:** ✅ 0 vulnerabilities (verified by `npm audit`)
+
+### Fixed Vulnerabilities:
+- nth-check ReDoS vulnerability (MEDIUM)
+- postcss input validation issue (MEDIUM)
+- serialize-javascript XSS vulnerability (MEDIUM)
+- inflight memory leak (MEDIUM - accepted risk)
+- webpack-dev-server origin validation error (HIGH)
+- webpack-dev-server exposed dangerous method (MEDIUM)
+
+All fixes are applied automatically via npm overrides and postinstall scripts. No manual intervention required.
+
 ## Running the Application
 
 ```bash
